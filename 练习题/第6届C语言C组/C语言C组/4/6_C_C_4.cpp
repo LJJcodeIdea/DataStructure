@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+void StringInGrid(int width, int height, const char* s)
+{
+	int i,k;
+	char buf[1000];
+	strcpy(buf, s);
+	if(strlen(s)>width-2) buf[width-2]=0;  //将内容赋值为0截断
+	//打印顶部
+	printf("+");
+	for(i=0;i<width-2;i++) printf("-");
+	printf("+\n");
+	
+	for(k=1; k<(height-1)/2;k++){
+		printf("|");
+		for(i=0;i<width-2;i++) printf(" ");
+		printf("|\n");
+	}
+	
+	printf("|");
+	
+	printf("%*s%s%*s",3,s,3);  //填空
+	          
+	printf("|\n");
+	
+	for(k=(height-1)/2+1; k<height-1; k++){
+		printf("|");
+		for(i=0;i<width-2;i++) printf(" ");
+		printf("|\n");
+	}	
+	
+	printf("+");
+	for(i=0;i<width-2;i++) printf("-");
+	printf("+\n");	
+}
+
+int main()
+{
+	StringInGrid(20,6,"abcd1234");
+	return 0;
+}

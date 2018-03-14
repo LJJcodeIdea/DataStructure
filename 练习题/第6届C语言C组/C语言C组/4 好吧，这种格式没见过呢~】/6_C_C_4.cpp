@@ -20,7 +20,7 @@ void StringInGrid(int width, int height, const char* s)
 	
 	printf("|");
 	
-	printf("%*s%s%*s",3,s,3);  //МоїХ
+	printf("%*s%s%*s",(width-strlen(s)-2)/2," ",s,(width-strlen(s)-2)/2,"");  //МоїХ
 	          
 	printf("|\n");
 	

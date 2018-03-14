@@ -1,0 +1,23 @@
+﻿生成启动时间为 2018/3/14 23:58:01。
+     1>项目“D:\1_2_1_GitBackUp\1_DataStructure\练习题\第6届C语言C组\C语言C组\2\test2\test2\test2.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\test2.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         D:\1-1 C语言\1 打代码的软件\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\test2.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt test2.cpp
+         test2.cpp
+     1>d:\1_2_1_gitbackup\1_datastructure\练习题\第6届c语言c组\c语言c组\2\test2\test2\test2.cpp(26): error C2668: “pow”: 对重载函数的调用不明确
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(583): 可能是“long double pow(long double,int)”
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(535): 或       “float pow(float,int)”
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(497): 或       “double pow(double,int)”
+                 尝试匹配参数列表“(int, int)”时
+     1>d:\1_2_1_gitbackup\1_datastructure\练习题\第6届c语言c组\c语言c组\2\test2\test2\test2.cpp(29): error C2668: “pow”: 对重载函数的调用不明确
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(583): 可能是“long double pow(long double,int)”
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(535): 或       “float pow(float,int)”
+                 d:\1-1 c语言\1 打代码的软件\vc\include\math.h(497): 或       “double pow(double,int)”
+                 尝试匹配参数列表“(int, int)”时
+     1>已完成生成项目“D:\1_2_1_GitBackUp\1_DataStructure\练习题\第6届C语言C组\C语言C组\2\test2\test2\test2.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.40

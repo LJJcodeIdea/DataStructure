@@ -52,14 +52,16 @@ int ListLen(List L){
 
 //冒泡排序：
 void sort(List L,int len){
-	List temp = L->next;
-	List before = L;
+	
 	int i,j;
 	
 	for(i = 0;i<len-1;i++){
+		List temp = L->next;  //开始比较的节点 
+	List before = L;     //开始比较节点的上一个节点 
 		for(j = 0;j<len-1-i;j++){
 			
 			if(temp->data > temp->next->data){
+				printf("%d,%d\n",temp->data,temp->next->data); 
 				List temp2 = (List)malloc(sizeof(struct Node));
 				
 					temp2 = temp->next; //暂存 第二个数 
@@ -79,9 +81,11 @@ int main(){
 	
 	//创建链表
 	List l = initList(result,MAX);
+
 	//冒泡排序
 	sort(l,MAX);
 	//打印结果 
+		
 	List temp = l->next;
 	while(temp){
 		printf("%d\n",temp->data);

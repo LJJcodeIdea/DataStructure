@@ -51,25 +51,27 @@ int ListLen(List L){
 } 
 
 //冒泡排序：
-void sort(List L,int len){
-	List temp = L->next;
-	List before = L;
+void sort(List L){
+	int len = ListLen(L);
+	List first;
+	List before;
 	int i,j;
 	
 	for(i = 0;i<len-1;i++){
+		//每次比较前，要确保开始时，first是第一个节点，而before是头结点 
+		first = L->next;
+		before = L; 
 		for(j = 0;j<len-1-i;j++){
-			
-			if(temp->data > temp->next->data){
-				List temp2 = (List)malloc(sizeof(struct Node));
+			if(first->data > first->next->data){
 				
-					temp2 = temp->next; //暂存 第二个数 
-					temp->next = temp->next->next; //第一个数next指向第三个数 
-					temp2->next = temp;  //第二个  指向第一个数 
-					before->next = temp2;  //第一个数的 前一个数 指向第二个数 
+					before->next = first->next;  // 
+					first->next = first->next->next;
+					before->next->next = first;
+					
 			}
-			before = temp;
-			temp = temp->next;
-		}
+			before = before->next; //befroe 变为下一节点 
+			first = before->next;  //first 是 berfore 的下一个结点 
+		} 
 	}
 } 
 
@@ -80,12 +82,12 @@ int main(){
 	//创建链表
 	List l = initList(result,MAX);
 	//冒泡排序
-	sort(l,MAX);
+	sort(l);
 	//打印结果 
-	List temp = l->next;
-	while(temp){
-		printf("%d\n",temp->data);
-		temp = temp->next;
+	List tempe = l->next;
+	while(tempe){
+		printf("%d\n",tempe->data);
+		tempe = tempe->next;
 	}
 	return 0;
 } 

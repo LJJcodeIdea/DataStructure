@@ -33,6 +33,11 @@
 */
 
 int main() {
+	
+	/*
+		好吧，一开始就分析错了，下面的for循环，得出的数据，根本就不是 Z 到  ZZZZZZZ 的相应值啊（实际上是：Z  YZ YYZ YYYZ ...的相应值）。还做个毛线啊。
+		 
+	*/
 	char A = 'A';
 	printf("%c\n",64+26);
 	printf("%d\n",2054/26); 
@@ -41,77 +46,6 @@ int main() {
 		printf("%d,%f\n",i,pow(26,i));
 	} 
 	
-	int in;
-	int count; 
-	int i;
-	scanf("%d",&in); 
-	
-	if(in <= pow(26,1)){
-		
-	}
-	else if(in <= pow(26,2)){
-		
-	}
-	else if(in <= pow(26,3)){
-		char result3[3] = {'A','A','A'};
-		/*
-	AAZ
-	ABA
-	ABZ
-	ACA
-	...
-	AZZ
-	BAA
-		*/
-		count = pow(26,2)+1;
-		i = 2;
-		printf("%d\n",in);
-		while(1){
-			
-			//处理末位的变化 
-			if(i == 2&&result3[i]!='A'){
-				count = count+1;
-				result3[i] += 1;
-				printf("%d\n",count);
-				if(count==in){
-					break;
-				}
-			}
-			else if(i == 2&&result3[i]=='Z'){
-				result3[i] = 'A';
-				i--;
-				result3[i] += 1; 
-			
-			}
-			//处理倒数第二位的变化
-			if(i == 1;&&result3[i+1]!='Z'&&result3[i]!='Z'){   //当末位不为Z，当前位不为Z时继续加 
-				count = count + 1;
-				reulst3[i+1]  += 1;
-				if(count==in){
-					break
-				}
-				if(i == 1&&result3[i+1]=='Z'&&result3[i]!='Z'){  //当末位为'Z' ,上一位不是'Z' 
-					result3[i+1] = 'A';
-					result3[i]  += 1;
-				} 
-			}
-		
-		}
-		for(i=0;i<=3;i++){
-			printf("%c",result3[i]);
-		}
-	}
-	else if(in <= pow(26,4)){
-		
-	}
-	else if(in <= pow(26,5)){
-		
-	}
-	else if(in <= pow(26,6)){
-		
-	}
-	else{
-		
-	}
+
 	
 }

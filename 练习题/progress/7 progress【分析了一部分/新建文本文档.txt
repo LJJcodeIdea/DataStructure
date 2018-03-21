@@ -1,0 +1,23 @@
+http://www.bubuko.com/infodetail-2479841.html
+ #include <iostream>
+  using namespace std;
+  int main()
+  {
+      long long a;
+      int yushu;
+      int b[100];
+      cin>>a;
+      int i=0;
+     while(a)
+     {
+         yushu=a%26;
+         if(yushu==0)yushu=26;
+         a=(a-yushu)/26;
+         b[i++]=yushu;
+     }
+     for(int j=i-1;j>=0;j--)
+     {
+         printf("%c",b[j]+กฎAกฎ-1);
+     }
+    return 0;
+ }
